@@ -8,7 +8,7 @@ app = Flask(__name__)
  
  
 def init_db():
-    \"\"\"Inisialisasi basis data dan membuat data pengguna awal.\"\"\"
+    """Inisialisasi basis data dan membuat data pengguna awal."""
     conn = sqlite3.connect("users.db")
     cursor = conn.cursor()
     cursor.execute(
@@ -23,7 +23,7 @@ def init_db():
  
 @app.route("/", methods=["GET", "POST"])
 def index():
-    \"\"\"Menampilkan formulir login dan memproses autentikasi.\"\"\"
+    """Menampilkan formulir login dan memproses autentikasi."""
     message = None
     status_class = None
  
